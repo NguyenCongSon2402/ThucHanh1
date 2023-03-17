@@ -1,9 +1,10 @@
 package com.example.thuchanh1.model;
 
 public class Object {
+    public static String ONLINE="online",OFF="Off";
     private int img;
-    private String name, des;
-    private double price;
+    private String name,kyhan,hinhthuc;
+    private double laixuat;
 
     public Object() {
     }
@@ -24,27 +25,35 @@ public class Object {
         this.name = name;
     }
 
-    public String getDes() {
-        return des;
+    public String getKyhan() {
+        return kyhan;
     }
 
-    public void setDes(String des) {
-        this.des = des;
+    public void setKyhan(String kyhan) {
+        this.kyhan = kyhan;
     }
 
-    public double getPrice() {
-        return price;
+    public String getHinhthuc() {
+        return hinhthuc;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setHinhthuc(String hinhthuc) {
+        this.hinhthuc = hinhthuc;
     }
 
-    public Object(int img, String name, String des, double price) {
+    public double getLaixuat() {
+        return laixuat;
+    }
+
+    public void setLaixuat(double laixuat) {
+        this.laixuat = laixuat;
+    }
+
+    public Object(int img, String name, String kyhan, String hinhthuc, double laixuat) {
         this.img = img;
         this.name = name;
-        this.des = des;
-        this.price = price;
+        this.kyhan = kyhan;
+        this.hinhthuc = hinhthuc;
+        this.laixuat = laixuat;
     }
-
 }

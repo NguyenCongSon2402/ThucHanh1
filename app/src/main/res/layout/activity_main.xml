@@ -27,6 +27,12 @@
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
+    <Spinner
+        android:id="@+id/kyhan"
+        android:entries="@array/my_spinner_values"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
     <EditText
         android:id="@+id/txtName"
         android:layout_width="match_parent"
@@ -37,20 +43,19 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/txtDes"
+        android:id="@+id/txtLaiXuat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Descreption"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/txtPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Price"
+        android:hint="Lãi Xuất %"
         android:inputType="number" />
+
+    <CheckBox
+        android:id="@+id/hinhthuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="online" />
 
     <LinearLayout
         android:layout_width="wrap_content"

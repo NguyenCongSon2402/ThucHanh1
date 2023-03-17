@@ -24,25 +24,24 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvName"
+                android:id="@+id/tvkyhan"
                 android:layout_width="230dp"
                 android:layout_height="wrap_content"
-                android:text="hi"
+                android:text="ky hạn"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/tvPrice"
+                android:id="@+id/tvLaiXuat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="hi"
+                android:text="LaiXuat"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/tvDes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="hi"
-                android:textSize="20sp" />
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:text="online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
         <Button

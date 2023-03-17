@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -62,11 +63,14 @@ public class ObAdapter extends RecyclerView.Adapter<ObAdapter.ObViewHolder> {
         Object object = mList.get(position);
         if (object == null)
             return;
-        Log.d("Fail", object.getDes() + "-" + object.getImg());
+        //Log.d("Fail", object.getDes() + "-" + object.getImg());
         holder.img.setImageResource(object.getImg());
-        holder.tvName.setText(object.getName());
-        holder.tvPrice.setText(object.getPrice() + "");
-        holder.tvDes.setText(object.getDes());
+        holder.tvKyhan.setText(object.getKyhan());
+        holder.tvLaiXuat.setText(object.getLaixuat() + "");
+        if (object.getHinhthuc() == Object.ONLINE)
+            holder.checkBox.setChecked(true);
+        else
+            holder.checkBox.setChecked(false);
         holder.btnRemove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,15 +107,17 @@ public class ObAdapter extends RecyclerView.Adapter<ObAdapter.ObViewHolder> {
 
     public class ObViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView img;
-        private TextView tvName, tvDes, tvPrice;
+        private TextView tvKyhan, tvLaiXuat;
+        private CheckBox checkBox;
         private Button btnRemove;
 
         public ObViewHolder(@NonNull View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.img1);
-            tvName = itemView.findViewById(R.id.tvName);
-            tvPrice = itemView.findViewById(R.id.tvPrice);
-            tvDes = itemView.findViewById(R.id.tvDes);
+            tvKyhan = itemView.findViewById(R.id.tvkyhan);
+            tvLaiXuat = itemView.findViewById(R.id.tvLaiXuat);
+            //tvDes = itemView.findViewById(R.id.tvDes);
+            checkBox = itemView.findViewById(R.id.checkbox);
             btnRemove = itemView.findViewById(R.id.btnDelete);
             itemView.setOnClickListener(this);
         }
